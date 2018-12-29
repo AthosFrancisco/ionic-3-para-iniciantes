@@ -20,6 +20,8 @@ import { ConfiguracoesPageModule } from '../pages/configuracoes/configuracoes.mo
 import { PerfilPageModule } from '../pages/perfil/perfil.module';
 import { SobrePageModule } from '../pages/sobre/sobre.module';
 import { FilmeDetalhePageModule } from '../pages/filme-detalhe/filme-detalhe.module';
+import { CameraPageModule } from '../pages/camera/camera.module';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { FilmeDetalhePageModule } from '../pages/filme-detalhe/filme-detalhe.mod
     ConfiguracoesPageModule,
     PerfilPageModule,
     SobrePageModule,
-    FilmeDetalhePageModule
+    FilmeDetalhePageModule,
+    CameraPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +55,8 @@ import { FilmeDetalhePageModule } from '../pages/filme-detalhe/filme-detalhe.mod
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MoovieProvider
+    MoovieProvider,
+    Camera
   ]
 })
 export class AppModule {}
